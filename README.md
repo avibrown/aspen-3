@@ -6,3 +6,5 @@ I am slowly organizing this project in such a way that I hope others will be abl
 - Josh Newans of [Articulad Robotics](https://articulatedrobotics.xyz/) -- He has a great [course](https://www.youtube.com/watch?v=OWeLUSzxMsw&list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT) on YouTube that helped me a lot with getting my robot running
 - Steve Macenski for developing [Nav2](https://navigation.ros.org/) and the [Slam Toolbox](https://github.com/SteveMacenski/slam_toolbox)
 - The folks at Factor Robotics for developing the [ODrive ROS 2 Control](https://github.com/Factor-Robotics/odrive_ros2_control) package
+
+![image](https://user-images.githubusercontent.com/63222803/231443613-5480641b-1625-46fa-b7fb-392498462427.png)
