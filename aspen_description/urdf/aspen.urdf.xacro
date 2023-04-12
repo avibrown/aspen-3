@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="aspen">
+
+  <xacro:arg name="prefix" default="" />
+
+  <xacro:include filename="./aspen_description.urdf.xacro" />
+
+  <xacro:include filename="./aspen.materials.xacro" />
+
+  <xacro:include filename="./odrive.ros2_control.xacro" />
+
+  <xacro:include filename="lidar.xacro" />
+
+  <xacro:aspen prefix="$(arg prefix)" />
+
+  <xacro:odrive_ros2_control
+    name="aspen"
+    joint0_name="$(arg prefix)left_wheel_joint"
+    joint1_name="$(arg prefix)right_wheel_joint" />
+
+</robot>
