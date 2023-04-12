@@ -20,3 +20,5 @@ I am slowly organizing this project in such a way that I hope others will be abl
 - 18V Makita battery
 - Arduino Mega
   - Handles manual control over UART <> ODrive: Intentionally isolated from the Pi for safety. 
+- Arduino Portenta H7 + Vision Shield
+  - This is my TinyML testing device. Currently I have it running a word recognition model that allows me to sent the robot to different rooms around the house with a voice command!
