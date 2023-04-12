@@ -50,13 +50,8 @@ def generate_launch_description():
         ]
     )
 
-    # rviz_config_file = PathJoinSubstitution(
-    #     [
-    #         FindPackageShare("diffbot_description"),
-    #         "config",
-    #         "diffbot.rviz"
-    #     ]
-    # )
+    params_file = os.path.join(get_package_share_directory("aspen-3"),
+                                       'config', 'mapper_params_online_async.yaml')
 
     control_node = Node(
         package="controller_manager",
@@ -108,7 +103,7 @@ def generate_launch_description():
  
     async_slam_node = Node(
         parameters=[
-          {'params_file', '../config/mapper_params_online_async.yaml'},
+          params_file,
           {'use_sim_time': False}
         ],
         package='slam_toolbox',
