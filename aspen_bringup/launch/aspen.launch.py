@@ -1,5 +1,3 @@
-# Copyright 2022 Factor Robotics
-#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -49,14 +47,6 @@ def generate_launch_description():
             "diffbot_controllers.yaml",
         ]
     )
-
-    # rviz_config_file = PathJoinSubstitution(
-    #     [
-    #         FindPackageShare("diffbot_description"),
-    #         "config",
-    #         "diffbot.rviz"
-    #     ]
-    # )
 
     control_node = Node(
         package="controller_manager",
