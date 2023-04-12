@@ -8,3 +8,11 @@ I am slowly organizing this project in such a way that I hope others will be abl
 - The folks at Factor Robotics for developing the [ODrive ROS 2 Control](https://github.com/Factor-Robotics/odrive_ros2_control) package
 
 <img src='https://user-images.githubusercontent.com/63222803/231443613-5480641b-1625-46fa-b7fb-392498462427.png' width='400'>
+
+---
+
+### Hardware details
+- Raspberry Pi 4 8GB
+  - test
+- sss
+  - sss
