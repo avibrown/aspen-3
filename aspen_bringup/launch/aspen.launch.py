@@ -115,16 +115,23 @@ def generate_launch_description():
         executable='async_slam_toolbox_node',
         name='slam_toolbox',
         output='screen')
-    
-    micro_ros_agent = ExecuteProcess(
+
+    kill_agents = ExecuteProcess(
         cmd=[[
             'sudo ',
             'pkill ',
             '-f ',
-            'micro_ros_agent ',
-            '&& '
-            'docker run ', 
-            # '-it ', 
+            'micro_ros_agent'
+        ]],
+        shell=True,
+        output='screen'
+    )
+
+    micro_ros_agent_ACM0 = ExecuteProcess(
+        cmd=[[
+            'sudo ',
+            'docker ',
+            'run ', 
             '--rm ', 
             '-v ',
             '/dev:/dev ',
@@ -134,10 +141,15 @@ def generate_launch_description():
             'serial ',
             '--dev ',
             '/dev/ttyACM0 ', 
-            '-v6',
-            '&& ',
-            'docker run ', 
-            # '-it ', 
+        ]],
+        shell=True
+    )
+
+    micro_ros_agent_ACM1 = ExecuteProcess(
+        cmd=[[
+            'sudo ',
+            'docker ',
+            'run ',
             '--rm ', 
             '-v ',
             '/dev:/dev ',
@@ -153,9 +165,24 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        micro_ros_agent,
+        kill_agents,
+
+        TimerAction(
+            period=1.0,
+            actions=[
+            micro_ros_agent_ACM0
+            ]
+        ),
+    
         TimerAction(
             period=2.0,
+            actions=[
+            micro_ros_agent_ACM1
+            ]
+        ),
+
+        TimerAction(
+            period=3.0,
             actions=[
                 control_node,
                 robot_state_pub_node,
