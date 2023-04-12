@@ -7,4 +7,4 @@ I am slowly organizing this project in such a way that I hope others will be abl
 - Steve Macenski for developing [Nav2](https://navigation.ros.org/) and the [Slam Toolbox](https://github.com/SteveMacenski/slam_toolbox)
 - The folks at Factor Robotics for developing the [ODrive ROS 2 Control](https://github.com/Factor-Robotics/odrive_ros2_control) package
 
-![image](https://user-images.githubusercontent.com/63222803/231443613-5480641b-1625-46fa-b7fb-392498462427.png){width=50%}
+![image](https://user-images.githubusercontent.com/63222803/231443613-5480641b-1625-46fa-b7fb-392498462427.png){ width=25% }
