@@ -13,6 +13,10 @@ I am slowly organizing this project in such a way that I hope others will be abl
 
 ### Hardware details
 - Raspberry Pi 4 8GB
-  - test
-- sss
-  - sss
+  - Handles ROS 2 control, LiDAR, SLAM...
+- rplidar
+- ODrive v3.6 24V motor controller
+- 2 x brushless "[RoboWheel](https://skysedge.com/robotics/robowheel170/index.html)" hub motors
+- 18V Makita battery
+- Arduino Mega
+  - Handles manual control over UART <> ODrive: Intentionally isolated from the Pi for safety. 
